@@ -6,11 +6,12 @@ const PORT = process.env.PORT || 3001;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(routes);
 
 
 
 
-
+// Ask server to start listening once the database is opened. 
 db.once('open', () => {
     app.listen(PORT, () => {
         console.log(`Server is listening on port ${PORT}`);
