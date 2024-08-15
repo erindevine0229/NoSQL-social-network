@@ -61,7 +61,7 @@ async deleteUserById(req, res) {
             return res.status(404).json({ message: "No user found with that Id." });
         }
 
-        await Thought.deleteMany({ id: { $in: user.thoughts} });
+        await Thought.deleteMany({ _id: { $in: user.thoughts} });
         res.json({ message: "All thoughts from this user successfully deleted!" })
     } catch (err) {
         res.status(500).json(err);
@@ -73,13 +73,36 @@ async deleteUserById(req, res) {
 
 
 async addNewFriend(req, res) {
-
+    try {
+        const user = await User.findOneAndUpdate(
+            { _id: req.params.userId },
+            { $addToSet: { friends: req.params.friendId }},
+            { new: true }
+        );
+        if (!user) {
+            return res.status(404).json({ message: "Unable to locate user with this Id" });
+        }
+        res.json(user);
+    } catch (err) {
+        res.status(500).json(err);
+    }
 },
 
 
 async deleteExistingFriend(req, res) {
-
+    try {
+        const user = await User.findOneAndUpdate(
+            { _id: req.params.userId },
+            { $pull: { friends: req.params.friendId }},
+            { new: true }
+        );
+        if (!user) {
+            return res.status(404).json({ message: "Unable to locate user with that ID" });
+        }
+        res.json(user);
+    } catch (err) {
+        res.status(500).json(err);
+    }
 },
-
 
 };

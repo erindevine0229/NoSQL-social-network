@@ -1,8 +1,28 @@
 const userArray = [
+    {
 
+    },
+
+    {
+
+    },
+
+    {
+
+    },
 ];
 
 
 const thoughtArray = [
+    {
 
+    },
+
+    {
+
+    },
+
+    {
+
+    },
 ];
