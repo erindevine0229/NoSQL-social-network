@@ -2,6 +2,8 @@ const { User, Thought } = require('../models');
 
 module.exports = {
 
+    // Logic for thought actions
+
 async getAllThoughts(req, res) {
     try {
         const allThoughts = await Thought.find();
@@ -45,7 +47,19 @@ async updateThoughtById(req,res) {
 
 
 async deleteThoughtById(req, res) {
-    
+
+},
+
+// Logic for reaction actions
+
+
+async addNewReaction(req, res) {
+
+},
+
+
+async deleteExistingReaction(req, res) {
+
 },
 
 };

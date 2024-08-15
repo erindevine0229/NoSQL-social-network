@@ -2,6 +2,8 @@ const { User, Thought } = require('../models');
 
 module.exports = {
 
+   // Logic for user actions
+
 async getAllUsers(req, res) {
     try {
         const allUsers = await User.find();
@@ -65,5 +67,19 @@ async deleteUserById(req, res) {
         res.status(500).json(err);
     }
 },
+
+
+//  Logic for friend actions
+
+
+async addNewFriend(req, res) {
+
+},
+
+
+async deleteExistingFriend(req, res) {
+
+},
+
 
 };
