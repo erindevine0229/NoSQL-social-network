@@ -1,0 +1,8 @@
+const userArray = [
+
+];
+
+
+const thoughtArray = [
+
+];
