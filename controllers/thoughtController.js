@@ -42,19 +42,41 @@ async createNewThought(req, res) {
 },
 
 async updateThoughtById(req,res) {
-
+    try {
+        const thought = await Thought.findOneAndUpdate (
+            { _id: req.params.thoughtId },
+            { $set: req.body },
+            { runValidators: true, new: true }
+        );
+        if(!thought) {
+            res.status(404).json({ message: "Unable to locate thought with this ID" });
+        }
+        res.json(thought);
+    } catch (err) {
+        res.status(500).json(err);
+    }
 },
 
 
 async deleteThoughtById(req, res) {
-
+    try {
+        const thought = await Thought.findOneAndDelete({ _id: req.params.thoughtId });
+        if (!thought) {
+            res.status(404).json({ message: "Unable to find thought with this ID" });
+        }
+        res.json({ message: "Thought successfully removed!" });
+    } catch (err) {
+        res.status(500).json(err);
+    }
 },
 
 // Logic for reaction actions
 
 
 async addNewReaction(req, res) {
-
+    try {
+        const 
+    }
 },
 
 
