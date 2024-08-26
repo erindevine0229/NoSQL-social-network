@@ -18,13 +18,10 @@ router
   .put(updateUserById)
   .delete(deleteUserById);
 
-router
-  .route("/:userId/friends")
-  .post(addNewFriend);
-
 
 router
   .route("/:userId/friends/:friendId")
+  .post(addNewFriend)
   .delete(deleteExistingFriend);
 
 module.exports = router;

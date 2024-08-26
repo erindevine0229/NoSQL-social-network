@@ -78,7 +78,7 @@ async addNewReaction(req, res) {
     try {
         const thought = await Thought.findOneAndUpdate(
             { _id: req.params.thoughtId },
-            { $addToSet: { reactions: req.body }},
+            { $push: { reactions: req.body }},
             { runValidators: true, new: true }
         );
         if (!thought) {
@@ -93,18 +93,22 @@ async addNewReaction(req, res) {
 
 async deleteExistingReaction(req, res) {
     try {
+        const thoughtId = req.params.thoughtId;
+        const reactionId = req.params.reactionId;
+  
         const thought = await Thought.findOneAndUpdate(
-            { _id: req.params.thoughtId },
-            { $pull: { reactions : { reactionId: req.params.reactionId }}},
-            { runValidators: true, new: true }
+          { _id: thoughtId },
+          { $pull: { reactions: { _id: reactionId } } },
+          { new: true }
         );
+  
         if (!thought) {
-            res.status(404).json({ message: "Unable to locate thought with this ID" });
+          return res.status(404).json({ message: 'No thought with that ID' });
         }
+  
         res.json(thought);
-    } catch (err) {
+      } catch (err) {
         res.status(500).json(err);
+      }
     }
-},
-
 };
