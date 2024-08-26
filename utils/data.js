@@ -2,36 +2,36 @@ const users = [
     {
         username: "spiderman",
         email: "pparker@gmail.com",
-        thoughts: ["66beab08ef6ceb51f3dcd09c" , "66beab08ef6ceb51f3dcd09e"],
-        friends: ["66beab08ef6ceb51f3dcd092", "66beab08ef6ceb51f3dcd093"]
+        thoughts: ["66c0013f94fc0e496cf417bc", "66c0013f94fc0e496cf417be"],
+        friends: ["66c0013f94fc0e496cf417b2", "66c0013f94fc0e496cf417b3", "66c0013f94fc0e496cf417b5"]
     },
 
     {
         username: "blackwidow",
         email: "nromanoff@aol.com",
         thoughts: [],
-        friends: ["66beab08ef6ceb51f3dcd095",  "66beab08ef6ceb51f3dcd094", "66beab08ef6ceb51f3dcd091"]
+        friends: ["66c0013f94fc0e496cf417b1", "66c0013f94fc0e496cf417b4"]
     },
 
     {
         username: "ironman",
         email: "tstark@yahoo.com",
-        thoughts: ["66beab08ef6ceb51f3dcd09d"],
-        friends: ["66beab08ef6ceb51f3dcd092", "66beab08ef6ceb51f3dcd091"]
+        thoughts: ["66c0013f94fc0e496cf417bd"],
+        friends: ["66c0013f94fc0e496cf417b2", "66c0013f94fc0e496cf417b4"]
     },
 
     {
         username: "captmarvel",
         email: "cdanvers@msn.com",
-        thoughts: ["66beab08ef6ceb51f3dcd09f", "66beab08ef6ceb51f3dcd09b"],
-        friends: ["66beab08ef6ceb51f3dcd095", "66beab08ef6ceb51f3dcd093", "66beab08ef6ceb51f3dcd091"]
+        thoughts: ["66c0013f94fc0e496cf417bb", "66c0013f94fc0e496cf417bf"],
+        friends: ["66c0013f94fc0e496cf417b1", "66c0013f94fc0e496cf417b2", "66c0013f94fc0e496cf417b5"]
     },
 
     {
         username: "docstrange",
         email: "sstrange@verizon.net",
         thoughts: [],
-        friends: ["66beab08ef6ceb51f3dcd092", "66beab08ef6ceb51f3dcd094"]
+        friends: ["66c0013f94fc0e496cf417b1", "66c0013f94fc0e496cf417b3", "66c0013f94fc0e496cf417b3"]
     }
 ];
 

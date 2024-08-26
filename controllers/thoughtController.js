@@ -73,6 +73,7 @@ async deleteThoughtById(req, res) {
 // Logic for reaction actions
 
 
+
 async addNewReaction(req, res) {
     try {
         const thought = await Thought.findOneAndUpdate(
