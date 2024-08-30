@@ -12,7 +12,7 @@ On the developer side, run the commands "npm run seed" and then "npm run dev" to
 
 In order to use this API, use Insomnia or a similar program to test the routes. The URL paths for each request are specified within the controller files. Routes that can be tested are GET, POST, PUT and DELETE,
 
-Link to Screencastify Video:
+Link to Screencastify Video: https://drive.google.com/file/d/1keymNhYZle614TvniPdUtvKrW3z3w7Mo/view
 
 ## Credits
 N/A
